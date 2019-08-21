@@ -17,34 +17,6 @@
 <div class="page-content" style="padding-top:100px;">
 	<div class="login-content content-box">
 		<unifi if="auth_hotspot">
-			<unifi if="payment_enabled" style="display: none;">
-				<form name="input" method="post" action="">
-					<h2>Please select the package of your choice</h2>
-					<div class="options-box">
-						<input type="radio" value="1" name="package" id="package-1" checked="checked" /><label for="package-1">8-Hour Pass - $5.99</label>
-						<input type="radio" value="2" name="package" id="package-2" /><label for="package-2">Day Pass $8.99</label>
-					</div>
-					<div class="form-controls">
-						<!-- for Paypal, we go straight to /guest/login to initiate the paypal process -->
-						<!--
-							if Pay-by-Paypal or Paypal Standard is desired
-							1. see http://wiki.ubnt.com/UniFi_and_Paypal_Integration
-							2. make the necessary changes to allow access to Paypal subnets
-							3. uncomment this section
-
-						<input type="hidden" name="by" value="paypal" />
-						<input type="submit" value="Pay by PayPal" class="button requires-tou" name="bypaypal" onclick="form.action='/guest/login';" />
-						-->
-						<!--
-							for credit card payment, we'll ask for more information in a separate page
-							Two more things:
-							- we pass the "package" information along using a post
-							- we also make sure it's using HTTPS
-						-->
-						<input type="submit" value="Pay by credit card" class="button requires-tou" name="bycredit" onclick="form.action='<unifi url="payment.html" https="true"/>';" />
-					</div>
-				</form>
-			</unifi>
 
 			<unifi if="voucher_enabled" style="display: none;">
 				<form name="input" method="post" action="login">
@@ -66,18 +38,6 @@
 					</div>
 					<div class="form-controls">
 						<input type="submit" value="Use Voucher" class="button requires-tou" />
-					</div>
-				</form>
-			</unifi>
-			<unifi if="payment_enabled" style="display: none;">
-				<form name="input" method="post" action="login">
-					<h2>or try it out for free</h2>
-					<div class="form-controls">
-						<input type="hidden" name="package" value="3" />
-						<!--
-						<input type="hidden" name="landing_url" value="http://www.yourdomain.com/?ap=<unifi var="ap_mac" />" />
-						-->
-						<input type="submit" value="2-hour Free Trial" class="button requires-tou"  name="byfree" />
 					</div>
 				</form>
 			</unifi>
