@@ -1,7 +1,8 @@
-html, body {
-	background-color: #dbdbdb;
-	font: 1.5rem/2rem "Helvetica Neue", "Helvetica", Arial, sans-serif;
-	color: #e0e0e0;
+
+
+body {
+	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	color: #000;
 }
 
 a {
@@ -13,35 +14,31 @@ a:active, a:focus {
 }
 
 h2 {
-	font-size: 16px;
-	margin-bottom: 5px;
+	font-size: 2rem;
+	line-height: 3rem;
+	margin-bottom: 0.5rem;
 }
 
-div.login-content h2 {
-	height: 21px;
-	margin: 15px 0px; padding: 3px 0px 0px 15px;
-	font-size: 12px; font-weight: bold;
-}
-
-div.login-content h2.error {
-	background: url(images/header-error-bg.png) repeat-x;
-}
-
-div.wizard-content, div.login-content {
-	background: #8b8b8b;
-	border: 1px solid #515151;
-	width: 500px; 
-	margin: 0px auto 0px auto;
-}
-
-body.login-page div.page-content {
-	width: 450px;
+.page-content {
 	margin: 0px auto;
-	padding-top: 50px;
+	padding-top: 10vh;
 }
 
-div.login-content {
-	width: 450px; 
+.login-content {
+	background-color: #8b8b8b;
+	border: 0.1rem solid #515151;
+	width: 50vw;
+	margin: 0 auto;
+}
+
+.login-content h2 {
+	margin: 1.5rem 0;
+	padding: 0.25rem;
+	font-weight: bold;
+}
+
+.login-content h2.error {
+	background-color: #922;
 }
 
 div.login-content fieldset {

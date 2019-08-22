@@ -12,9 +12,9 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/guest.js"></script>
 </head>
-<body class="login-page">
+<body>
 <!-- see README.txt for HTML customization instructions -->
-<div class="page-content" style="padding-top:100px;">
+<div class="page-content">
 	<div class="login-content content-box">
 		<unifi if="auth_hotspot">
 			<unifi if="payment_enabled" style="display: none;">
@@ -91,7 +91,8 @@
 					<unifi if="has_error">
 						<h2 class="error"><unifi error="error" /></h2>
 						<unifi else="has_error" />
-						<h2><unifi txt="PasswordRequiredForWirelessAccess" /></h2>
+						<!--<h2><unifi txt="PasswordRequiredForWirelessAccess" /></h2>-->
+						<h2>A password is required to access the wireless network</h2>
 					</unifi>
 
 					<!-- password input -->
