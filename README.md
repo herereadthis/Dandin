@@ -1,5 +1,10 @@
 # Dandin
 
+```bash
+npm install
+npm run live
+```
+
 The directory `portal` contains a highly modified version of the Ubiquiti Legacy JSP Guest Portal that comes with the USG
 
 The directory `portal-archive` contains the original Legacy JSP Guest Portal files.
@@ -19,14 +24,14 @@ Go into your controller, which should be http://`<IP_ADDRESS>`:8443
 Raspberry Pi Controller
 
 * Some prerequisites:
-  ```
+  ```bash
   # install zip
   sudo apt-get install zip
   ```
 * The Unifi directory, or `<unifi_base>` is `/usr/lib/unifi`
 * all the junk is located in /usr/lib/unifi/data/sites/default/portal
 * You will have to change permissions on the directories to get to them
-  ```
+  ```bash
   cd /usr/lib/unifi
   # see permissions
   la -la
@@ -37,7 +42,7 @@ Raspberry Pi Controller
   mv site.zip ~/
   ```
 * copy the contents to your local machine to do work.
-  ```
+  ```bash
   scp pi@lime:/home/pi/foo.zip foo.zip
   ```
 
@@ -45,7 +50,7 @@ Raspberry Pi Controller
 
 Go to the Unifi site and download the Unifi Controller for Debian/Linux
 
-```
+```bash
 # install the Unifi Controller
 sudo dpkg -i unifi_sysvinit_all.deb
 # After installation, you will get a warning about missing packages. Install them.

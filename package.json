@@ -1,0 +1,27 @@
+{
+  "name": "dandin",
+  "version": "1.0.0",
+  "description": "Ubiquiti unifi guest portal",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "live": "./node_modules/live-server/live-server.js --port=5000 --open='/portal'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herereadthis/dandin.git"
+  },
+  "keywords": [
+    "unifi",
+    "ubiquiti"
+  ],
+  "author": "Jimmy Ha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herereadthis/dandin/issues"
+  },
+  "homepage": "https://github.com/herereadthis/dandin#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
