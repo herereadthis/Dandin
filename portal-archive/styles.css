@@ -38,11 +38,7 @@ div.wizard-content, div.login-content {
 	-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px;
 }
 
-body.login-page div.page-content {
-	width: 450px;
-	margin: 0px auto;
-	padding-top: 50px;
-}
+
 
 div.login-content {
 	width: 450px; 
