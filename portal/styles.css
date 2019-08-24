@@ -4,50 +4,85 @@ body {
 
 @media screen and (min-width: 320px) {
 	body {
-		background-color: #F00;
+	}
+	label {
+		display: block;
+		font-size: 2rem;
+	}
+	input[type='password'] {
+		display: block;
+		font-size: 2rem;
+	}
+	input[type='submit'] {
+		border-width: 0;
+		padding: 0;
+		text-transform: uppercase;
+		font-size: 2rem;
+		background-color: transparent;
+		text-decoration: underline;
+		color: #05ffa1;
+		font-family: "Times New Roman", Times, serif;
+
+	}
+	input[type='submit']:hover {
+		 border-width: 0;
+	}
+
+	h2.english {
+		letter-spacing: 1rem;
+		font-size: 13vw;
+		line-height: 13vw;
 	}
 }
 @media screen and (min-width: 480px) {
 	body {
-		background-color: #FF0;
+	}
+
+	h2.english {
+		letter-spacing: 5vw;
+		font-size: 8vw;
+		line-height: 8vw;
 	}
 }
 @media only screen and (min-width: 640px) {
 	body {
-		background-color: #0F0;
 	}
 }
 @media only screen and (min-width: 768px) {
 	body {
-		background-color: #0FF;
 	}
 }
 @media only screen and (min-width: 1024px) {
 	body {
-		background-color: #00F;
 	}
 }
 @media only screen and (min-width: 1280px) {
 	body {
-		background-color: #F0F;
 	}
 }
 @media only screen and (min-width: 1440px) {
 	body {
-		background-color: #FFF;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	body {
-		background-color: lightblue;
 	}
 }
 
 
 body {
-	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-	color: #000;
+	/*font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;*/
+	font-family: "Times New Roman", Times, serif;
+
+
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background: -webkit-linear-gradient( to top, #FF71CE, #01CDFE);
+	background: -moz-linear-gradient( to top, #FF71CE, #01CDFE);
+	background: -ms-linear-gradient( to top, #FF71CE, #01CDFE);
+	background: -o-linear-gradient( to top, #FF71CE, #01CDFE);
+	background: linear-gradient( to top, #FF71CE, #01CDFE);
+
 }
 
 a {
@@ -59,9 +94,15 @@ a:active, a:focus {
 }
 
 h2 {
+	color: #fffb96;
 	font-size: 2rem;
 	line-height: 3rem;
-	margin-bottom: 0.5rem;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+}
+h2.error {
+	background-color: #922;
 }
 
 .page-content {
@@ -70,21 +111,13 @@ h2 {
 }
 
 .login-content {
-	background-color: #8b8b8b;
-	border: 0.1rem solid #515151;
-	width: 50vw;
+	/*background-color: #8b8b8b;*/
+	/*border: 0.1rem solid #515151;*/
+	/*width: 50vw;*/
 	margin: 0 auto;
 }
 
-.login-content h2 {
-	margin: 1.5rem 0;
-	padding: 0.25rem;
-	font-weight: bold;
-}
 
-.login-content h2.error {
-	background-color: #922;
-}
 
 div.login-content fieldset {
 	padding: 0px 15px;
@@ -99,28 +132,9 @@ div.login-content fieldset.tou {
 	font-size: 11px;
 }
 
-div.login-content label.fieldname {
-	display: block; float: left;
-	font-size: 16px;
-	width: 150px;
-}
 
-div.login-content input.textInput {
-	display: block; float: right;
-	font-size: 16px;
-	padding: 3px;
-	width: 184px;
-	margin-bottom: 10px;
-}
 
-div.form-controls {
-	width: 100%;
-	text-align: right;
-	padding: 20px 0;
-}
-
-div.form-controls input {
-	margin-right: 15px;
+.form-controls {
 }
 
 div.tou-wrapper {
@@ -162,23 +176,18 @@ div.authed {
 .button {
 	padding: 5px 10px;
 	color: #1e1e1e;
-	background: #cfcfcf url(images/button-bg.png); background-position: 0px 50%;
 	cursor: pointer;
 	border: 1px solid #707070;
-	-moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px;
-	-moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-bottom-right-radius: 3px;
 }
 
 .button.disabled,
 .button.disabled:hover {
 	color: #aaaaaa;
 	border-color: #aaaaaa;
-	background: #cfcfcf url(images/button-bg.png); background-position: 0px 50%;
 	cursor: auto;
 }
 
 .button:hover {
-	background: #cfcfcf url(images/button-bg-hover.png); background-position: 0px 50%;
 	border: 1px solid #3c7fb1;
 }
 
