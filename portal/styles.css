@@ -9,6 +9,21 @@ body {
 	height: 100vh;
 	align-items: center;
 	justify-content: space-between;
+	font-family: "Times New Roman", Times, serif;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background: -webkit-linear-gradient( to top, #FF71CE, #01CDFE);
+	background: -moz-linear-gradient( to top, #FF71CE, #01CDFE);
+	background: -ms-linear-gradient( to top, #FF71CE, #01CDFE);
+	background: -o-linear-gradient( to top, #FF71CE, #01CDFE);
+	background: linear-gradient( to top, #FF71CE, #01CDFE);
+}
+
+fieldset {
+	margin: 0;
 }
 
 main {
@@ -23,7 +38,8 @@ main {
 	text-align: center;
 }
 
-.title.english {
+.title .english {
+	display: block;
 	padding-left: 4vw;
 	letter-spacing: 6vw;
 	font-size: 10vw;
@@ -33,15 +49,16 @@ main {
 
 .foreignTitle {
 	font-size: 4vw;
-	line-height: 4vw;
+	line-height: 5vw;
 }
 
-.title .russian, .title .japanese, .title .vietnamese {
+.title .vietnamese, .title .japanese {
+	display: block;
 }
 
 .title .vietnamese {
-	font-style: italic;
-	text-transform: lowercase;
+	/*font-style: italic;*/
+	/*text-transform: lowercase;*/
 }
 
 .label {
@@ -71,6 +88,10 @@ input[type='password'] {
 	box-sizing: border-box;
 	/*color: #05FFA1;*/
 	color: #B967FF;
+	font-size: 4vw;
+	width: 90vw;
+	border-width: 0.1vw;
+	padding: 2vw;
 }
 
 .form-controls {
@@ -95,6 +116,11 @@ input[type='submit']:hover, input[type='submit']:focus {
 	border-color: #B967FF;
 	cursor: pointer;
 }
+input[type='submit']:disabled {
+	color: #ACE5d0;
+	border-color: transparent;
+	cursor: not-allowed;
+}
 
 .accept-tou {
 	margin: 0 auto;
@@ -102,46 +128,40 @@ input[type='submit']:hover, input[type='submit']:focus {
 }
 
 #accept-tou {
-	font-size: 1.5vw;
+	font-size: 2vw;
 	line-height: 2vw;
 }
 
 #acceptTouLabel {
-	font-size: 1.5vw;
+	font-size: 2vw;
+	line-height: 2vw;
+}
+
+.tou-wrapper {
+	width: 90vw;
+	margin: 0 auto;
+	border: 0.1rem solid #B967FF;
+	background-color: #FFFB96;
+	color: #B967FF;
+	padding: 1vw;
+	font-size: 2vw;
 	line-height: 2vw;
 }
 
 footer {
+	height: 4.5vw;
 }
 
 .footerText {
 	color: 	#05FFA1;
 	text-transform: lowercase;
+	font-size: 3vw;
+	line-height: 4.5vw;
+	letter-spacing: 3vw;
 }
 
 
 @media screen and (min-width: 320px) {
-	body {
-	}
-	input[type='password'] {
-		font-size: 4vw;
-		width: 90vw;
-		border-width: 0.1vw;
-		padding: 2vw;
-	}
-
-	.title.english {
-	}
-	.footer {
-		height: 3vw;
-	}
-
-
-	.footerText {
-		font-size: 3vw;
-		line-height: 4.5vw;
-		letter-spacing: 3vw;
-	}
 }
 @media screen and (min-width: 480px) {
 	body {
@@ -153,15 +173,59 @@ footer {
 
 	input[type='password'] {
 		font-size: 3vw;
+		padding: 1vw;
 		width: 50vw;
+	}
+
+	#accept-tou, #acceptTouLabel, .tou-wrapper {
+		font-size: 1.5vw;
+		line-height: 1.5vw;
 	}
 }
 @media only screen and (min-width: 768px) {
-	body {
+	.title .english {
+		padding-left: 4vw;
+		letter-spacing: 6vw;
+		font-size: 9vw;
+		line-height: 9vw;
+		padding-bottom: 2vw;
 	}
 
+	.foreignTitle {
+		font-size: 3vw;
+		line-height: 3vw;
+	}
+
+	.title .vietnamese, .title .japanese {
+		display: inline;
+	}
+
+	.title .russian:after {
+		content: ' | '
+	}
+
+	.title .vietnamese:after {
+		content: ' | '
+	}
+
+	.label.password {
+		padding: 1vw;
+		font-size: 3vw;
+		line-height: 3vw;
+		padding-top: 2vw;
+	}
+
+	#accept-tou, #acceptTouLabel, .tou-wrapper {
+		font-size: 1vw;
+		line-height: 1vw;
+	}
+
+	footer {
+		height: 3vw;
+	}
 	.footerText {
 		font-size: 2vw;
+		line-height: 3vw;
 		letter-spacing: 3vw;
 	}
 
@@ -174,7 +238,7 @@ footer {
 	body {
 	}
 
-	.title.english {
+	.title .english {
 		padding-left: 2vw;
 		letter-spacing: 4vw;
 		font-size: 8vw;
@@ -182,7 +246,7 @@ footer {
 		padding-bottom: 1vw;
 	}
 
-	.title.russian, .title.japanese {
+	.title .russian, .title .japanese {
 		font-size: 4vw;
 		line-height: 4vw;
 	}
@@ -192,25 +256,6 @@ footer {
 	}
 }
 
-
-body {
-	/*font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;*/
-	font-family: "Times New Roman", Times, serif;
-
-
-
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background: -webkit-linear-gradient( to top, #FF71CE, #01CDFE);
-	background: -moz-linear-gradient( to top, #FF71CE, #01CDFE);
-	background: -ms-linear-gradient( to top, #FF71CE, #01CDFE);
-	background: -o-linear-gradient( to top, #FF71CE, #01CDFE);
-	background: linear-gradient( to top, #FF71CE, #01CDFE);
-
-}
 
 a {
 	color: #e0e0e0;
@@ -232,9 +277,6 @@ h2.error {
 	background-color: #922;
 }
 
-.page-content {
-}
-
 .login-content {
 	/*background-color: #8b8b8b;*/
 	/*border: 0.1rem solid #515151;*/
@@ -245,16 +287,6 @@ h2.error {
 
 
 
-div.tou-wrapper {
-	width: 90%;
-	height: 100px;
-	overflow: auto;
-	margin: 0 auto;
-	border: 1px solid #555;
-	background-color: #eee;
-	color: #555;
-	padding: 3px;
-}
 
 div.options-box {
 	text-align: center;
