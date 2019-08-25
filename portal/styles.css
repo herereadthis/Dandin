@@ -23,6 +23,27 @@ main {
 	text-align: center;
 }
 
+.title.english {
+	padding-left: 4vw;
+	letter-spacing: 6vw;
+	font-size: 10vw;
+	line-height: 10vw;
+	padding-bottom: 2.5vw;
+}
+
+.foreignTitle {
+	font-size: 4vw;
+	line-height: 4vw;
+}
+
+.title .russian, .title .japanese, .title .vietnamese {
+}
+
+.title .vietnamese {
+	font-style: italic;
+	text-transform: lowercase;
+}
+
 .label {
 	display: block;
 }
@@ -31,6 +52,11 @@ main {
 	text-transform: lowercase;
 	color: 	#05FFA1;
 	text-align: center;
+	padding: 1vw;
+	font-style: italic;
+	font-size: 4vw;
+	line-height: 4vw;
+	padding-top: 2vw;
 }
 
 input:focus {
@@ -43,7 +69,8 @@ input[type='password'] {
 	padding: 0;
 	border-style: solid;
 	box-sizing: border-box;
-	color: 	#05FFA1;
+	/*color: #05FFA1;*/
+	color: #B967FF;
 }
 
 .form-controls {
@@ -52,13 +79,36 @@ input[type='password'] {
 
 input[type='submit'] {
 	text-align: center;
-	border-width: 0;
-	padding: 0;
+	padding: 0.5vw;
+	border-width: 0.5vw;
+	border-color: transparent;
 	text-transform: uppercase;
 	background-color: transparent;
 	text-decoration: underline;
 	color: #05FFA1;
 	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 4vw;
+	line-height: 4vw;
+}
+input[type='submit']:hover, input[type='submit']:focus {
+	border-color: #B967FF;
+	cursor: pointer;
+}
+
+.accept-tou {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#accept-tou {
+	font-size: 1.5vw;
+	line-height: 2vw;
+}
+
+#acceptTouLabel {
+	font-size: 1.5vw;
+	line-height: 2vw;
 }
 
 footer {
@@ -74,40 +124,18 @@ footer {
 	body {
 	}
 	input[type='password'] {
-		font-size: 4.5vw;
+		font-size: 4vw;
 		width: 90vw;
 		border-width: 0.1vw;
 		padding: 2vw;
 	}
-	input[type='submit'] {
-		font-size: 2rem;
-
-	}
-	input[type='submit']:hover {
-		 border-width: 0;
-	}
 
 	.title.english {
-		padding-left: 3vw;
-		letter-spacing: 6vw;
-		font-size: 9vw;
-		line-height: 9vw;
-		padding-bottom: 1.5vw;
 	}
 	.footer {
 		height: 3vw;
 	}
 
-	.title.russian, .title.japanese {
-		font-size: 4.5vw;
-		line-height: 4.5vw;
-	}
-
-	.label.password {
-		font-size: 3vw;
-		line-height: 3vw;
-		padding-top: 3vw;
-	}
 
 	.footerText {
 		font-size: 3vw;
@@ -216,20 +244,6 @@ h2.error {
 
 
 
-div.login-content fieldset {
-	padding: 0px 15px;
-}
-
-div.login-content fieldset p {
-	clear: both;
-}
-
-div.login-content fieldset.tou {
-	padding-top: 5px;
-	font-size: 11px;
-}
-
-
 
 div.tou-wrapper {
 	width: 90%;
@@ -265,73 +279,5 @@ div.tou ul li {
 
 div.authed {
 	padding-bottom: 25px;
-}
-
-.button {
-	padding: 5px 10px;
-	color: #1e1e1e;
-	cursor: pointer;
-	border: 1px solid #707070;
-}
-
-.button.disabled,
-.button.disabled:hover {
-	color: #aaaaaa;
-	border-color: #aaaaaa;
-	cursor: auto;
-}
-
-.button:hover {
-	border: 1px solid #3c7fb1;
-}
-
-ol.fixed-form {
-	list-style: none outside none;
-	padding: 0 20px;
-}
-
-ol.fixed-form li {
-	display: block;
-	float: left;
-	height: 3em;
-	margin: 0 10px 10px 0;
-}
-
-ol.fixed-form li.col-1 {
-	width: 80px;
-}
-
-ol.fixed-form li.col-2 {
-	width: 160px;
-}
-
-ol.fixed-form li.col-3 {
-	width: 240px;
-}
-
-ol.fixed-form li.col-5 {
-	width: 300px;
-}
-
-ol.fixed-form li.last {
-	float: right;
-	margin-right: 0;
-}
-
-ol.fixed-form li.full {
-	float: none;
-	margin-right: 0;
-}
-
-ol.fixed-form label {
-	clear: right;
-	display: block;
-	font-weight: bold;
-}
-
-ol.fixed-form li input {
-	width: 97%;
-	display: inline;
-	margin-bottom: 3px;
 }
 
