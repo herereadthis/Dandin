@@ -114,9 +114,7 @@
 						</fieldset>
 
 						<!-- submit -->
-						<div class="form-controls">
-							<input name="connect" type="submit" value="Connect" id="connect" class="button requires-tou" />
-						</div>
+						<input name="connect" type="submit" value="Connect" id="connect" class="button requires-tou" />
 					</div>
 				</form>
 			</unifi>
@@ -125,10 +123,10 @@
 		<div class="login-content content-box">
 			<form name="input" method="post" action="login">
 				<div class="tou-box">
-					<fieldset class="accept-tou">
+					<div class="accept-tou">
 						<input id="accept-tou" type="checkbox" checked="checked" name="accept-tou" value="yes" />
 						<label id="acceptTouLabel" class="normal" >I accept the <a href="javascript:void(0)" id="show-tou">Terms of Use</a></label>
-					</fieldset>
+					</div>
 					<div class="tou-wrapper" id="tou" style="display: none;">
 						<div class="tou">
 							<p><strong>Terms of Use</strong></p>
@@ -155,7 +153,7 @@
 </main>
 
 <footer>
-	<p class="footerText">100% Safe&mdash;Zero Virus</p>
+	<p class="footerText"><span class="safe">100% Safe</span><span class="virus">Zero Virus</span></p>
 </footer>
 
 <script type="text/javascript">

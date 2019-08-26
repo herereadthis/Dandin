@@ -24,6 +24,9 @@ body {
 
 fieldset {
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 main {
@@ -38,18 +41,26 @@ main {
 	text-align: center;
 }
 
+.error {
+	background-color: #922;
+}
+
 .title .english {
 	display: block;
-	padding-left: 4vw;
-	letter-spacing: 6vw;
-	font-size: 10vw;
-	line-height: 10vw;
-	padding-bottom: 2.5vw;
+	padding-left: 3vw;
+	letter-spacing: 4vw;
+	font-size: 13vw;
+	line-height: 13vw;
 }
 
 .foreignTitle {
-	font-size: 4vw;
-	line-height: 5vw;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	font-size: 5vw;
+	line-height: 6vw;
+}
+
+.title .russian {
 }
 
 .title .vietnamese, .title .japanese {
@@ -69,11 +80,9 @@ main {
 	text-transform: lowercase;
 	color: 	#05FFA1;
 	text-align: center;
-	padding: 1vw;
 	font-style: italic;
-	font-size: 4vw;
-	line-height: 4vw;
-	padding-top: 2vw;
+	font-size: 6vw;
+	line-height: 6vw;
 }
 
 input:focus {
@@ -82,16 +91,16 @@ input:focus {
 
 input[type='password'] {
 	display: block;
-	margin: 0 auto;
-	padding: 0;
+	margin: 1vw auto 0 auto;
 	border-style: solid;
 	box-sizing: border-box;
-	/*color: #05FFA1;*/
+	border-color: #05FFA1;
 	color: #B967FF;
-	font-size: 4vw;
+	font-size: 5vw;
+	line-height: 6vw;
 	width: 90vw;
-	border-width: 0.1vw;
-	padding: 2vw;
+	border-width: 0.3vw;
+	padding: 3vw;
 }
 
 .form-controls {
@@ -99,8 +108,10 @@ input[type='password'] {
 }
 
 input[type='submit'] {
+	display: block;
+	margin: 0 auto;
 	text-align: center;
-	padding: 0.5vw;
+	padding: 0.5vw 1.5vw;
 	border-width: 0.5vw;
 	border-color: transparent;
 	text-transform: uppercase;
@@ -109,8 +120,8 @@ input[type='submit'] {
 	color: #05FFA1;
 	font-family: "Times New Roman", Times, serif;
 	font-style: italic;
-	font-size: 4vw;
-	line-height: 4vw;
+	font-size: 6vw;
+	line-height: 6vw;
 }
 input[type='submit']:hover, input[type='submit']:focus {
 	border-color: #B967FF;
@@ -125,16 +136,21 @@ input[type='submit']:disabled {
 .accept-tou {
 	margin: 0 auto;
 	text-align: center;
+	color: #FFFB96;
 }
 
-#accept-tou {
-	font-size: 2vw;
-	line-height: 2vw;
+.accept-tou a {
+	color: #01CDFE;
+	text-decoration: underline;
 }
 
-#acceptTouLabel {
-	font-size: 2vw;
-	line-height: 2vw;
+.accept-tou a:hover {
+	color: #02A4CC;
+}
+
+#accept-tou, #acceptTouLabel {
+	font-size: 3vw;
+	line-height: 3vw;
 }
 
 .tou-wrapper {
@@ -149,37 +165,42 @@ input[type='submit']:disabled {
 }
 
 footer {
-	height: 4.5vw;
+	height: 10vw;
 }
 
 .footerText {
 	color: 	#05FFA1;
 	text-transform: lowercase;
-	font-size: 3vw;
-	line-height: 4.5vw;
-	letter-spacing: 3vw;
+	font-size: 5vw;
+	line-height: 5vw;
+	letter-spacing: 6vw;
+	word-spacing: -3vw;
+}
+
+.safe, .virus {
+	display: block;
+}
+.safe {
+	padding-left: 2.5vw;
 }
 
 
-@media screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) {
 }
-@media screen and (min-width: 480px) {
-	body {
-	}
+@media only screen and (min-width: 480px) {
 }
 @media only screen and (min-width: 640px) {
-	body {
+	footer {
+		height: 8vw;
 	}
-
-	input[type='password'] {
-		font-size: 3vw;
-		padding: 1vw;
-		width: 50vw;
+	.footerText {
+		font-size: 4vw;
+		line-height: 4vw;
+		letter-spacing: 4vw;
+		word-spacing: -2vw;
 	}
-
-	#accept-tou, #acceptTouLabel, .tou-wrapper {
-		font-size: 1.5vw;
-		line-height: 1.5vw;
+	.safe {
+		padding-left: 1.5vw;
 	}
 }
 @media only screen and (min-width: 768px) {
@@ -188,12 +209,13 @@ footer {
 		letter-spacing: 6vw;
 		font-size: 9vw;
 		line-height: 9vw;
-		padding-bottom: 2vw;
 	}
 
 	.foreignTitle {
+		padding-top: 2vw;
 		font-size: 3vw;
 		line-height: 3vw;
+		padding-bottom: 1rem;
 	}
 
 	.title .vietnamese, .title .japanese {
@@ -209,26 +231,51 @@ footer {
 	}
 
 	.label.password {
-		padding: 1vw;
+		padding: 0;
 		font-size: 3vw;
 		line-height: 3vw;
-		padding-top: 2vw;
+	}
+
+	input[type='password'] {
+		font-size: 3vw;
+		line-height: 3vw;
+		padding: 1vw 1.5vw;
+		width: 50vw;
 	}
 
 	#accept-tou, #acceptTouLabel, .tou-wrapper {
-		font-size: 1vw;
-		line-height: 1vw;
+		font-size: 1.5vw;
+		line-height: 1.5vw;
 	}
 
 	footer {
 		height: 3vw;
 	}
+
 	.footerText {
-		font-size: 2vw;
-		line-height: 3vw;
+		font-size: 2.5vw;
+		line-height: 2.5vw;
 		letter-spacing: 3vw;
+		word-spacing: -1vw;
 	}
 
+	.safe, .virus {
+		display: inline;
+	}
+	.safe {
+		padding-left: 0;
+	}
+	.safe:after {
+		content: '—';
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.page-content {
+		width: 900px;
+		height: 512px;
+		background-color: #F00;
+	}
 }
 @media only screen and (min-width: 1024px) {
 	body {
@@ -257,59 +304,7 @@ footer {
 }
 
 
-a {
-	color: #e0e0e0;
-}
-
-a:active, a:focus {
-	outline: 0;
-}
-
-h2 {
-	color: #fffb96;
-	font-size: 2rem;
-	line-height: 3rem;
-	font-weight: normal;
-	text-transform: uppercase;
-	text-align: center;
-}
-h2.error {
-	background-color: #922;
-}
-
-.login-content {
-	/*background-color: #8b8b8b;*/
-	/*border: 0.1rem solid #515151;*/
-	/*width: 50vw;*/
-	margin: 0 auto;
-}
 
 
 
-
-
-div.options-box {
-	text-align: center;
-}
-
-div.options-box label {
-	padding-left: 3px;
-	padding-right: 8px;
-}
-
-div.credit-box dl {
-	padding-left: 30px;
-}
-
-div.tou p {
-	margin-bottom: 5px;
-}
-
-div.tou ul li {
-	list-style: circle;
-}
-
-div.authed {
-	padding-bottom: 25px;
-}
 
